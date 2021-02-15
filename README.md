@@ -2,6 +2,13 @@
 Neuer Versuch fai config files
 
 New Ideas:
+Versionen/Branches: ?
+* minimal
+* simple
+* deb-only
+* diskconfig
+* faiserver
+
 ```
 Debian 10 per faime installiert dann. fai pakete installiert.
 
