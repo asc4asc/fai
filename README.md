@@ -3,7 +3,7 @@ Neuer Versuch fai config files
 
 New Ideas:
 ```
-Debian 10 per faime installiert dann. fai und kvm pakete installiert.
+Debian 10 per faime installiert dann. fai pakete installiert.
 
 sudo su
 export FAI_BASEFILEURL=https://fai-project.org/download/basefiles/ # funktioniert nicht musste basefile selbst erzeugen/downloaden. 
