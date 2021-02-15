@@ -5,6 +5,8 @@ New Ideas:
 ```
 Debian 10 per faime installiert dann. fai pakete installiert.
 
+git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copieren.
+
 sudo su
 export FAI_BASEFILEURL=https://fai-project.org/download/basefiles/ # funktioniert nicht musste basefile selbst erzeugen/downloaden. 
 
