@@ -6,6 +6,8 @@ New Ideas:
 Debian 10 per faime installiert dann. fai und kvm pakete installiert.
 
 sudo su
+export FAI_BASEFILEURL=https://fai-project.org/download/basefiles/ # funktioniert nicht musste basefile selbst erzeugen/downloaden. 
+
 cl='AMD64,FAIBASE,DEBIAN,BUSTER64,DEMO,GRUB_PC'
 sudo fai-diskimage -v -S5G --hostname demohost -c$cl fai-demohost-buster64.qcow2
 sudo chown debian.debian fai-server-buster64.qcow2
