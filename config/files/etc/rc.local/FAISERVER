@@ -10,10 +10,8 @@ GREEN='\E[32m'
 set -o pipefail
 
 # setup network
-nic=$(cat /etc/network/interfaces /etc/network/interfaces.d/* 2>/dev/null | awk '$1 == "iface" && $2 != "lo" {print $2; exit}')
-if [ -n "$nic" ]; then
-    ifup $nic
-fi
+nic=$(awk '/iface/ {print $2}' /etc/network/interfaces |egrep -v ^lo)
+ifup $nic
 # regenerate ssh_host keys
 ls /etc/ssh/ssh_host_* > /dev/null
 if [ $? -ne 0 ]; then

@@ -12,4 +12,6 @@ elif ifclass FAISERVER; then
     echo FAISERVER_EFI
 elif ifclass LVM; then
     echo LVM_EFI
+elif ifclass XENIAL; then
+    echo XENIAL_EFI
 fi
