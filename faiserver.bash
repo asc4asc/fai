@@ -10,6 +10,6 @@ sudo fai-diskimage -v -S10G --hostname faiserver -c$cl fai-server-buster64.qcow2
 sudo chown demo.demo fai-server-buster64.qcow2
 sudo fai-mk-network -i enp8s0 demo
 fai-kvm disk fai-server-buster64.qcow2 &
-echo Please wait for faiserver is ready! 
+echo "Please wait for faiserver is ready!" 
 read 
 fai-kvm -NVn -u 2 pxe # Test Installation
