@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt install qemu-utils bridge-utils qemu-kvm qemu-system-gui
 
-ping -c=1 google.com || exit 1
+ping -c 1 google.com || exit 1
 $INET="enp8s0" # better probe for interface to the internet (default gw?) 
 
 USERNAME="demo"
