@@ -3,3 +3,10 @@ export LANG=C
 gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
 gsettings set org.gnome.desktop.screensaver lock-enabled false
 gsettings set org.gnome.desktop.session idle-delay 0
+
+gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
+
+## Standby deaktivieren (gilt nicht für Akku-Modus):
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type "nothing"
+
