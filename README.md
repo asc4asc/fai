@@ -40,5 +40,5 @@ fai-kvm -NVn -u 2 pxe # Test Installation
 
 fai-kvm -u 2 disk /tmp/faitest-disk-2-1.qcow2 # Test des Tests :-)
 
-fai-me: Zusatzpakete: kvm git fai-quickstart fai-setup-storage / Password fai / User demo / later: cockpit cockpit-maschines
+fai-me: Zusatzpakete: git / Password fai / User demo 
 ```
