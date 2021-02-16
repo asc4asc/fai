@@ -7,14 +7,15 @@ USERNAME="demo"
 GROUPNAME="demo"
 USERNAME="$USER"
 GROUPNAME="$USER" # not correct but ....
-COMPFILENAME="fai-demohost-buster64.qcow2"
+COMPHOSTNAME="demohost"
+COMPFILENAME="fai-$(demohost)-buster64.qcow2"
+cl='AMD64,FAIBASE,DEBIAN,BUSTER64,DEMO,GRUB_PC' # Fai Classen fuer diesen Host.
 
 sudo mkdir /srv/fai
 sudo cp -ar config/ /srv/fai/
 sudo /srv/fai/config/basefiles/mk-basefile -d . BUSTER64
 sudo cp BUSTER* /srv/fai/config/basefiles/ 
-cl='AMD64,FAIBASE,DEBIAN,BUSTER64,DEMO,GRUB_PC'
-sudo fai-diskimage -v -S10G --hostname demohost -c$cl $COMPFILENAME
+sudo fai-diskimage -v -S10G --hostname $COMPHOSTNAME -c$cl $COMPFILENAME
 sudo chown $USERNAME.$GROUPNAME $COMPFILENAME
 
 ping -c 1 google.com || exit 1
