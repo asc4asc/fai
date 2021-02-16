@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir -p /home/${USER}/.config/autostart/
 cat >/home/${USER}/.config/autostart/term.desktop <<EOF
 [Desktop Entry]
