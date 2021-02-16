@@ -1,5 +1,5 @@
 #!/bin/bash
-apt install qemu-utils bridge-utils qemu-kvm qemu-system-gui
+sudo apt install qemu-utils bridge-utils qemu-kvm qemu-system-gui
 
 sudo mkdir /srv/fai
 sudo cp -ar config/ /srv/fai/
