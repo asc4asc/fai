@@ -1,6 +1,8 @@
 # fai
 Neuer Versuch fai config files
 
+git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copieren.
+
 New Ideas:
 Versionen/Branches: ?
 * minimal
