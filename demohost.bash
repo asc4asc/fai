@@ -18,5 +18,6 @@ sudo fai-diskimage -v -S10G --hostname demohost -c$cl $COMPFILENAME
 sudo chown $USERNAME.$GROUPNAME $COMPFILENAME
 
 ping -c 1 google.com || exit 1
+ip addr|grep $INET || exit 1
 sudo fai-mk-network -P -i $INET $USERNAME
 fai-kvm disk $COMPFILENAME
