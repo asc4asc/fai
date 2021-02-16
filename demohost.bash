@@ -8,13 +8,14 @@ USERNAME="demo"
 GROUPNAME="demo"
 USERNAME="$USER"
 GROUPNAME="$USER" # not correct but ....
+COMPFILENAME="fai-demohost-buster64.qcow2"
 
 sudo mkdir /srv/fai
 sudo cp -ar config/ /srv/fai/
 sudo /srv/fai/config/basefiles/mk-basefile -d . BUSTER64
 sudo cp BUSTER* /srv/fai/config/basefiles/ 
 cl='AMD64,FAIBASE,DEBIAN,BUSTER64,DEMO,GRUB_PC'
-sudo fai-diskimage -v -S10G --hostname demohost -c$cl fai-demohost-buster64.qcow2
-sudo chown $USERNAME.$GROUPNAME fai-server-buster64.qcow2
+sudo fai-diskimage -v -S10G --hostname demohost -c$cl $COMPFILENAME
+sudo chown $USERNAME.$GROUPNAME $COMPFILENAME
 sudo fai-mk-network -P -i $INET $USERNAME
-fai-kvm disk fai-demohost-buster64.qcow2 
+fai-kvm disk  $COMPFILENAME
