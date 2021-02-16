@@ -26,6 +26,8 @@ chmod -c 0700 $target/root
 chown -c root:root $target/root
 # copy default dotfiles for root account
 fcopy -ir /root
+fcopy -ir /usr/local
+
 
 # use tmpfs for /tmp if not defined in disk_config
 if ! grep -Pq '\s/tmp\s' $target/etc/fstab; then
