@@ -16,3 +16,4 @@ fai-me: Zusatzpakete: git / Password fai / User demo
 ## Beachten
 * gmrl
 * web-fai
+* fai softupdate
