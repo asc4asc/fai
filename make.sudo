@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo addgroup --group testsu && sudo adduser ${USER} testsu && sudo echo '%testsu ALL=(ALL:ALL) NOPASSWD:ALL' > /tmp/gen4testing && sudo cp /tmp/gen4testing /etc/sudoers.d
 
-echo "leider fascher Eintrag in sudoers" 
-# sed delete line  
-# ansline /etc/sudoers 
+echo "Den leider faschen Eintrag in sudoers reparieren" 
+sed '/#includedir /etc/sudoers.d/d' /etc/sudoers 
+ainsl -s /etc/sudoers '#includedir /etc/sudoers.d'
