@@ -5,7 +5,7 @@ cat >/home/${USER}/.config/autostart/term.desktop <<EOF
 Type=Application
 # Exec=gnome-terminal 
 # Exec=sudo gnome-terminal
-Exec=gnome-terminal -e /home/demo/fai.config/testme
+Exec=gnome-terminal # -e /home/demo/fai.config/testme
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
