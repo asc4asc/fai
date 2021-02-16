@@ -18,4 +18,4 @@ cl='AMD64,FAIBASE,DEBIAN,BUSTER64,DEMO,GRUB_PC'
 sudo fai-diskimage -v -S10G --hostname demohost -c$cl $COMPFILENAME
 sudo chown $USERNAME.$GROUPNAME $COMPFILENAME
 sudo fai-mk-network -P -i $INET $USERNAME
-fai-kvm disk  $COMPFILENAME
+fai-kvm disk $COMPFILENAME
