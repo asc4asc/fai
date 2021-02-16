@@ -24,14 +24,18 @@ sudo fai-mk-network -i $INET $USERNAME
 fai-kvm disk fai-server-buster64.qcow2 &
 echo "Please wait for faiserver is ready!" 
 read 
-fai-kvm -NVn -u 2 pxe # Test Installation
+fai-kvm -NVn -u 2 pxe & # Test Installation
+echo "Next Client?" 
 read 
-fai-kvm -NVn -u 3 pxe # Test Installation
+fai-kvm -NVn -u 3 pxe & # Test Installation
+echo "Next Client?"
 read 
-fai-kvm -NVn -u 4 pxe # Test Installation
+fai-kvm -NVn -u 4 pxe & # Test Installation
+echo "Next Client?"
 read 
-fai-kvm -NVn -u 5 pxe # Test Installation
+fai-kvm -NVn -u 5 pxe & # Test Installation
+echo "Next Client?"
 read 
-fai-kvm -NVn -u 6 pxe # Test Installation
-
+fai-kvm -NVn -u 6 pxe & # Test Installation
+read 
 
