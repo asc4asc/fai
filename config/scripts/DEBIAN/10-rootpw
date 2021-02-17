@@ -7,8 +7,8 @@ if [ -n "$ROOTPW" ]; then
     $ROOTCMD usermod -p "$ROOTPW" root
 else
     $ROOTCMD usermod -L root
-    # enable sudo for user
-    ainsl /etc/sudoers "$username   ALL = ALL"
+    # enable sudo for user / not so good also sudo is not installed.
+    # ainsl /etc/sudoers "$username   ALL = ALL"
 fi
 
 exit $error
