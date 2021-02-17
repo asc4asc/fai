@@ -6,8 +6,8 @@ git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copie
 Zum laufen bringen:
 ```
 Debian 10 per faime installiert dann git ....
-fai-diskimage 
-fai Server
+fai-diskimage / auch als raw und dann per dd if=.....raw of=/dev/device status=progress
+fai Server per diskimage installiert.
 
 So etwas wie faime um z.B. neuen usbstick zu generieren. Oder wirtuelle maschine
 
