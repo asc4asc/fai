@@ -15,13 +15,13 @@ GROUPNAME="$USER" # not correct but ....
 
 sudo mkdir /srv/fai
 sudo cp -ar config/ /srv/fai/
-sudo /srv/fai/config/basefiles/mk-basefile -d . BUSTER64
-sudo cp BUSTER* /srv/fai/config/basefiles/ 
-cl='AMD64,FAIBASE,DEBIAN,BUSTER64,DEMO,FAISERVER,GRUB_PC'
-sudo fai-diskimage -v -S10G --hostname faiserver -c$cl fai-server-buster64.qcow2
-sudo chown $USERNAME.$GROUPNAME fai-server-buster64.qcow2
+# sudo /srv/fai/config/basefiles/mk-basefile -d . BUSTER64
+# sudo cp BUSTER* /srv/fai/config/basefiles/ 
+cl='AMD64,FAIBASE,DEBIAN,BUSTER64,DEMO,FAISERVER,EASYTEST,GRUB_PC'
+sudo fai-diskimage -v -S10G --hostname faiserver -c$cl fai-server-buster64.raw
+sudo chown $USERNAME.$GROUPNAME fai-server-buster64.raw
 sudo fai-mk-network -i $INET $USERNAME
-fai-kvm disk fai-server-buster64.qcow2 &
+fai-kvm disk fai-server-buster64.raw &
 echo "Please wait for faiserver is ready!" 
 read 
 fai-kvm -NVn -u 2 pxe & # Test Installation
