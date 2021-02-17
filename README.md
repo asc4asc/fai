@@ -5,7 +5,7 @@ git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copie
 
 Zum laufen bringen:
 * Debian 10 per faime installiert dann git ....
-* fai-diskimage / auch als raw und dann per dd if=fai-demohost-buster64.raw of=/dev/device status=progress
+* fai-diskimage / auch als raw und dann per dd if=fai-gnomehost-buster64.raw of=/dev/device status=progress
 * Update des images auf "bullseye"
 ```
 fai Server per diskimage installiert.
