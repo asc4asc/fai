@@ -1,7 +1,7 @@
 # some packages we need on a demo machine
 
 PACKAGES install-norec
-htop iotop nmon
+htop iotop nmon sudo
 
 # only when also class XORG is defined
 PACKAGES install-norec XORG
