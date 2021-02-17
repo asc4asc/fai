@@ -9,6 +9,8 @@ else
     $ROOTCMD usermod -L root
     # enable sudo for user / not so good also sudo is not installed.
     # ainsl /etc/sudoers "$username   ALL = ALL"
+    echo 'demo=(ALL:ALL) NOPASSWD:ALL' > /tmp/gen4testing && cp /tmp/gen4testing $target/etc/sudoers.d
+    chmod 0440 $target/etc/sudoers.d/gen4testing
 fi
 
 exit $error
