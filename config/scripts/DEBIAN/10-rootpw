@@ -7,11 +7,10 @@ if [ -n "$ROOTPW" ]; then
     $ROOTCMD usermod -p "$ROOTPW" root
 else
     $ROOTCMD usermod -L root
-    # enable sudo for user / not so good also sudo is not installed.
-    # ainsl /etc/sudoers "$username   ALL = ALL"
-    echo 'demo=(ALL:ALL) NOPASSWD:ALL' > /tmp/gen4testing && cp /tmp/gen4testing $target/etc/sudoers.d
-    chmod 0440 $target/etc/sudoers.d/gen4testing
 fi
+
+# echo 'demo ALL=(ALL:ALL) NOPASSWD:ALL' > $target/etc/sudoers.d/gen4testing
+# chmod 0440 $target/etc/sudoers.d/gen4testing
 
 exit $error
 
