@@ -15,7 +15,7 @@ GROUPNAME="demo"
 USERNAME="$USER"
 GROUPNAME="$USER" # not correct but ....
 COMPHOSTNAME="demohost"
-COMPFILENAME="fai-$(COMPHOSTNAME)-buster64.qcow2"
+COMPFILENAME="fai-$(COMPHOSTNAME)-buster64.raw"
 cl='AMD64,DHCPC,FAIBASE,DEBIAN,BUSTER64,DEMO,GRUB_PC' # Fai Classen fuer diesen Host.
 
 sudo mkdir /srv/fai
