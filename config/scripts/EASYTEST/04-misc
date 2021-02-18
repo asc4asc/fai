@@ -1,0 +1,19 @@
+#! /bin/bash
+set -x 
+error=0; trap 'error=$(($?>$error?$?:$error))' ERR # save maximum error code
+
+# a list of modules which are loaded at boot time
+#    ainsl -a /etc/modules "^$module$"
+
+fcopy -irv -m=root,root,0755 /usr/local/sbin
+fcopy -irv -m=root,root,0755 /usr/local/bin
+
+# nur wenn gdm
+# $ROOTCMD set.gdm.autostart 
+
+# $ROOTCMD make-auto-login-console # wenn keine grafische Oberflaeche
+
+# nur wenn gnome
+# $ROOTCMD USER=demo && make.startterm # works?
+
+exit $error
