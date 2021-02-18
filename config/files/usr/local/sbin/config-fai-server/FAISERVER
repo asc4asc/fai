@@ -28,7 +28,7 @@ echo "================================="
 . /etc/fai/fai.conf
 . /etc/fai/nfsroot.conf
 
-apt install git
+apt -y install git
 
 if [ ! -d "$FAI_CONFIGDIR/class" ]; then
     cd /tmp && git clone --branch main https://github.com/asc4asc/fai.config.git

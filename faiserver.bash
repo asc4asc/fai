@@ -26,7 +26,7 @@ then
 else 
   [ -f BUSTER* ] || sudo /srv/fai/config/basefiles/mk-basefile -d . BUSTER64
   sudo cp BUSTER* /srv/fai/config/basefiles/ 
-  sudo rm BUSTER*
+  # sudo rm BUSTER*
 fi
 
 cl='AMD64,FAIBASE,DEBIAN,BUSTER64,DEMO,FAISERVER,EASYTEST,GRUB_PC'
