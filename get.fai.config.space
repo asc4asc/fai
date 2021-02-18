@@ -1,0 +1,7 @@
+#!/bin/bash
+cd /tmp
+git clone --branch main https://github.com/asc4asc/fai.config.git
+cd /srv/fai 
+[ -f config ] || sudo mv config config.$RANDOM
+sudo mv /tmp/fai.config/config config
+sudo rm -rf /tmp/fai.config
