@@ -18,3 +18,7 @@ fai-me: Zusatzpakete: git / Password fai / User demo
 * gmrl
 * web-fai
 * fai softupdate
+
+## Idee so
+* Möglichts alles als Utility in /usr/locasl/ (moeglichst hin und wieder entfernen) (Wenn nötig doppelten Aufruf verhindern.) (Löschen wenn fertig?)
+* Möglichst einfach passend zu Klassen z.B GNOME:GDM:EASYTEST.... Moeglichkeit alle Utilitys zum testen oder nur das was funktioniert laden.
