@@ -5,7 +5,7 @@ ff02::2		ip6-allrouters
 
 192.168.33.250 faiserver
 192.168.33.100 demohost
-192.168.33.101 xfcehost
+192.168.33.101 gnomehost
 192.168.33.102 client01
 192.168.33.103 client02
 192.168.33.104 client03
