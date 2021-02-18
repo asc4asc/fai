@@ -24,7 +24,7 @@ if [ -f /srv/fai/config/basfile/BUSTER* ];
 then
   echo vorhanden
 else 
-  sudo /srv/fai/config/basefiles/mk-basefile -d . BUSTER64
+  [ -f BUSTER* ] || sudo /srv/fai/config/basefiles/mk-basefile -d . BUSTER64
   sudo cp BUSTER* /srv/fai/config/basefiles/ 
   sudo rm BUSTER*
 fi

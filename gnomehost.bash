@@ -25,10 +25,10 @@ sudo cp -ar config/ /srv/fai/
 if [ -f /srv/fai/config/basfile/BUSTER* ];
 then
   echo vorhanden
-else 
-  sudo /srv/fai/config/basefiles/mk-basefile -d . BUSTER64
+else
+  [ -f BUSTER* ] || sudo /srv/fai/config/basefiles/mk-basefile -d . BUSTER64
   sudo cp BUSTER* /srv/fai/config/basefiles/ 
-  sudo rm BUSTER*
+  # sudo rm BUSTER*
 fi
 sudo fai-diskimage -v -S7G --hostname $COMPHOSTNAME -c$cl $COMPFILENAME
 sudo chown $USERNAME.$GROUPNAME $COMPFILENAME
