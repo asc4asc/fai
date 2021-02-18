@@ -26,7 +26,7 @@ fai-me: Zusatzpakete: git / Password fai / User demo
 ## Gedanken zu Klassen
 * FAI Klassen steuern den Installationsprozess. z.B FAIBASE, DEBIAN, BUSTER64
 * Admin Klassen sagen wie wahrscheinlich konfigurirt wird. z.B. SYSTEMD, GDM 
-** Alternative Admin KLassen: NETWORMANAGER,NETPLAN,INTERFACES,SYSTEMD
+ * Alternative Admin KLassen: NETWORMANAGER,NETPLAN,INTERFACES,SYSTEMD
 * Steuer Klassen z.B. DEMO, ...
 
 
