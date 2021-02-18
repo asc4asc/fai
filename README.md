@@ -22,3 +22,9 @@ fai-me: Zusatzpakete: git / Password fai / User demo
 ## Idee so
 * Möglichts alles als Utility in /usr/locasl/ (moeglichst hin und wieder entfernen) (Wenn nötig doppelten Aufruf verhindern.) (Löschen wenn fertig?)
 * Möglichst einfach passend zu Klassen z.B GNOME:GDM:EASYTEST.... Moeglichkeit alle Utilitys zum testen oder nur das was funktioniert laden.
+
+## Gedanken zu Klassen
+* FAI Klassen steuern den Installationsprozess. z.B FAIBASE, DEBIAN, BUSTER64
+* Admin Klassen sagen wie wahrscheinlich konfigurirt wird. z.B. SYSTEMD, GDM 
+* Steuer Klassen z.B. DEMO, ...
+
