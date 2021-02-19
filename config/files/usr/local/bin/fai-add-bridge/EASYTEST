@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo brctl addif br0 enp4s0
