@@ -10,8 +10,8 @@ GREEN='\E[32m'
 set -o pipefail
 
 # setup network
-nic=$(awk '/iface/ {print $2}' /etc/network/interfaces |egrep -v ^lo)
-ifup $nic
+#nic=$(awk '/iface/ {print $2}' /etc/network/interfaces |egrep -v ^lo)
+#ifup $nic
 # regenerate ssh_host keys
 ls /etc/ssh/ssh_host_* > /dev/null
 if [ $? -ne 0 ]; then
@@ -30,16 +30,11 @@ echo "================================="
 
 apt -y install git
 
-if [ ! -d "$FAI_CONFIGDIR/class" ]; then
-    cd /tmp && git clone --branch main https://github.com/asc4asc/fai.config.git
-fi
-
 # copy the simple examples and pimp my config space
 if [ ! -d "$FAI_CONFIGDIR/class" ]; then
     mkdir -p $FAI_CONFIGDIR
-    # cp -a /usr/share/doc/fai-doc/examples/simple/* $FAI_CONFIGDIR
-    cp -a /tmp/fai.config/config/* $FAI_CONFIGDIR
-
+    cd $FAI_CONFIGDIR 
+    git clone --branch main https://github.com/asc4asc/fai.config.git
     ainsl /srv/fai/config/class/FAIBASE.var "^LOGUSER=fai"
     myip=$(ip addr show up| grep -P -o '(?<=inet )[^/]+' | grep -v 127.0.0.1)
     echo "APTPROXY=http://$myip:3142" >> /srv/fai/config/class/DEBIAN.var
