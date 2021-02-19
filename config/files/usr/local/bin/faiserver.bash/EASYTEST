@@ -20,7 +20,7 @@ sudo mkdir -p /srv/fai
 sudo rm -r /srv/fai/config
 sudo cp -ar config/ /srv/fai/
 
-if [ -f /srv/fai/config/basfile/BUSTER* ];
+if [ -f /srv/fai/config/basefile/BUSTER* ];
 then
   echo vorhanden
 else 
