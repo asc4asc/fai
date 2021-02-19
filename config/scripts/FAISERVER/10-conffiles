@@ -21,7 +21,7 @@ if [ $FAI_ACTION = "install" -o $FAI_ACTION = "dirinstall" ] ; then
     myip=$(ip addr show up| grep -P -o '(?<=inet )[^/]+' | grep -v 127.0.0.1)
     ainsl /etc/hosts "$myip faiserver"  # that's me
     ainsl /etc/hosts "192.168.33.100 demohost"
-    ainsl /etc/hosts "192.168.33.101 xfcehost"
+    ainsl /etc/hosts "192.168.33.101 gnomehost"
     # add entries for 10 hosts called client 01 .. 10
     perl -e 'for (1..10) {printf "192.168.33.%s client%02s\n",101+$_,$_;}' >> $target/etc/hosts
 
