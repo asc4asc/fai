@@ -42,7 +42,7 @@ read
 fai-kvm -NVn -u 2 pxe & # Test Installation
 echo "Next Client?" 
 read 
-fai-kvm -NVn -u 3 pxe & # Test Installation
+fai-kvm -NVn -S20G -u 3 pxe & # Test Installation
 echo "Next Client?"
 read 
 fai-kvm -NVn -u 4 pxe & # Test Installation
