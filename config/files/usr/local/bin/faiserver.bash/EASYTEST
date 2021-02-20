@@ -15,10 +15,9 @@ GROUPNAME="$USER" # not correct but ....
 COMPHOSTNAME="faiserver"
 COMPFILENAME="fai-$COMPHOSTNAME-buster64.raw"
 
-
 sudo mkdir -p /srv/fai
 sudo rm -r /srv/fai/config
-sudo cp -ar config/ /srv/fai/
+sudo cp -ar /home/demo/fai.config/config/ /srv/fai/
 
 if [ -f /srv/fai/config/basefile/BUSTER* ];
 then
