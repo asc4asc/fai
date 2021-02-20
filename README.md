@@ -34,6 +34,7 @@ fai-me: Zusatzpakete: git / Password fai / User demo
 * ? Ziel Distribution ? 
 #### Was braucht man typischer Weise?
 Verbindung zum Internet ????
+Hier könnte man nach bekannten vorhanden Interfaces entscheiden. z.B ist enp0s31f6 oder wlp6s0 ..... da nutze diese. Evtl noch weitere Tests linkup?  
 Verbindung fuer die Bridge um externe Computer zu verbinden.
 ```
 INET=" wlp6s0 " # Wlan laptop
