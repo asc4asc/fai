@@ -21,7 +21,7 @@ cat >/home/${USER}/.config/autostart/term1.desktop <<"EOF"
 Type=Application
 # Exec=gnome-terminal
 # Exec=sudo gnome-terminal
-Exec=gnome-terminal -- /bin/sh -c 'bash -x faiserver.bash; sleep 10; exec bash'
+Exec=gnome-terminal -- /bin/sh -c 'sleep 3 && get.fai.config.space && bash -x faiserver.bash; exec bash'
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
@@ -31,3 +31,5 @@ Comment[en_US]=
 Comment=
 X-GNOME-Autostart-Delay=0
 EOF
+
+# End of file
