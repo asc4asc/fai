@@ -1,5 +1,4 @@
-Default: Xfce
-
+Default: Gnome
 Name: Simple
 Description: My first FAI installation
 Short: just a very simple example, no xorg, an account called demo

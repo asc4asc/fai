@@ -29,4 +29,20 @@ fai-me: Zusatzpakete: git / Password fai / User demo
  * Alternative Admin KLassen: NETWORMANAGER,NETPLAN,INTERFACES,SYSTEMD
 * Steuer Klassen z.B. DEMO, ...
 
+## Config var File
+* SC5,SC6,PC6,Laptop,... Seriennummer?
+* ? Ziel Distribution ? 
+#### Was braucht man typischer Weise?
+Verbindung zum Internet ????
+Verbindung fuer die Bridge um externe Computer zu verbinden.
+```
+INET=" wlp6s0 " # Wlan laptop
+# INET="enp4s0" # SC5 Port unten  
+# INET="enp0s31f6" # SC5 Port oben
 
+USERNAME="demo"
+GROUPNAME="demo"
+USERNAME="$USER"
+GROUPNAME="$USER" # not correct but ....
+COMPHOSTNAME="faiserver"
+```
