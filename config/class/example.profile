@@ -22,7 +22,7 @@ Long: This is the Gnome desktop example. Additional account called
 demo with password: fai, root password: fai
 You should have a fast network connection, because most packages are
 downloaded from the internet.
-Classes: INSTALL FAIBASE DEBIAN DEMO XORG EASYTEST GNOME
+Classes: INSTALL FAIBASE DEBIAN DEMO DHCPC XORG EASYTEST GNOME
 
 Name: CentOS 8
 Description: CentOS 8 with Xfce desktop
