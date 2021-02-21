@@ -4,6 +4,7 @@ Neuer Versuch fai config files
 git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copieren.
 
 ## ToDo
+* Geht das? Git technik "late branch" "tag" "work in main" problem rename main to tag 
 * split der faiserver.bash datei in generate teil und start clients teil.
 * faiserver eigenständig betreiben nicht immer neu erzeugen auch fai config space dort verwalten.
 
