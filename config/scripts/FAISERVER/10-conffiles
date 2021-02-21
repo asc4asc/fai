@@ -19,11 +19,11 @@ if [ $FAI_ACTION = "install" -o $FAI_ACTION = "dirinstall" ] ; then
 
     # create some host entries
     myip=$(ip addr show up| grep -P -o '(?<=inet )[^/]+' | grep -v 127.0.0.1)
-    ainsl /etc/hosts "$myip faiserver"  # that's me
-    ainsl /etc/hosts "192.168.33.100 demohost"
-    ainsl /etc/hosts "192.168.33.101 gnomehost"
+    # ainsl /etc/hosts "$myip faiserver"  # that's me
+    # ainsl /etc/hosts "192.168.33.100 demohost"
+    # ainsl /etc/hosts "192.168.33.101 gnomehost"
     # add entries for 10 hosts called client 01 .. 10
-    perl -e 'for (1..10) {printf "192.168.33.%s client%02s\n",101+$_,$_;}' >> $target/etc/hosts
+    # perl -e 'for (1..10) {printf "192.168.33.%s client%02s\n",101+$_,$_;}' >> $target/etc/hosts
 
     sed -i -e '/# ReuseConnections: 1/d' $target/etc/apt-cacher-ng/acng.conf
     ainsl -v /etc/apt-cacher-ng/acng.conf "ReuseConnections: 0"
@@ -44,5 +44,4 @@ if [ $FAI_ACTION = "install" -o $FAI_ACTION = "dirinstall" ] ; then
 	mkdir -p $target/srv/fai/config/basefiles
 	cp -vp $FAI/basefiles/*.tar.* $target/srv/fai/config/basefiles 2>/dev/null || true
     fi
-    fcopy -iM /etc/hosts # overwrite if hostfile is given
 fi
