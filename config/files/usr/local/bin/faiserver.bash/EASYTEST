@@ -11,7 +11,9 @@ INET="enp0s31f6" # SC5
 ip link show $INET 2>/dev/null | grep $INET >/dev/null || 
 INET="wlp6s0" # Laptop 
 ip link show $INET 2>/dev/null | grep $INET >/dev/null || 
-INET="enp8s0" #  
+INET="enp8s0" # ? SC6/PC6 ? 
+ip link show $INET 2>/dev/null | grep $INET >/dev/null || 
+INET="ens3" # virt host gnome. 
 ip link show $INET 2>/dev/null | grep $INET >/dev/null || 
 INET="Kein IF!" 
 # echo NET $INET ; exit 0
