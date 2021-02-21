@@ -1,2 +1,3 @@
 sleep 3
 config-fai-server
+mv $0 reconfig-fai-server.bashrc # /var/tmp??
