@@ -3,7 +3,11 @@ Neuer Versuch fai config files
 
 git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copieren.
 
-Zum laufen bringen:
+## ToDo
+* split der faiserver.bash datei in generate teil und start clients teil.
+* faiserver eigenständig betreiben nicht immer neu erzeugen auch fai config space dort verwalten.
+
+#### zum laufen bringen:
 * Debian 10 per faime installiert dann git ....
 * fai-diskimage / auch als raw und dann per dd if=fai-gnomehost-buster64.raw of=/dev/device status=progress
 * Update des images auf "bullseye"
