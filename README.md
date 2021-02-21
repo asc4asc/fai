@@ -9,6 +9,7 @@ git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copie
 * Verteilung der dateien/Änderungen und den Rücktransport ins git organisieren.
 * split der faiserver.bash datei in generate teil und start clients teil.
 * faiserver eigenständig betreiben nicht immer neu erzeugen auch fai config space dort verwalten.
+* Tastatur de wenigstens bei fai-disk aus dem host auslesen und als Klasse übergeben. Klasse: KBDE
 
 #### zum laufen bringen:
 * Debian 10 per faime installiert dann git ....
