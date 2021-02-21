@@ -44,4 +44,5 @@ if [ $FAI_ACTION = "install" -o $FAI_ACTION = "dirinstall" ] ; then
 	mkdir -p $target/srv/fai/config/basefiles
 	cp -vp $FAI/basefiles/*.tar.* $target/srv/fai/config/basefiles 2>/dev/null || true
     fi
+    fcopy -iM /etc/hosts # overwrite if hostfile is given
 fi
