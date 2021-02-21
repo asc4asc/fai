@@ -10,6 +10,7 @@ git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copie
 * split der faiserver.bash datei in generate teil und start clients teil.
 * faiserver eigenständig betreiben nicht immer neu erzeugen auch fai config space dort verwalten.
 * Tastatur de wenigstens bei fai-disk aus dem host auslesen und als Klasse übergeben. Klasse: KBDE
+* Klasse: DHCPC ist noch etwas in den scripten und sollte bei demohost, gnomehost gesetzt werden oder einige Aktionen. 
 
 #### zum laufen bringen:
 * Debian 10 per faime installiert dann git ....
