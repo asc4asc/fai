@@ -14,7 +14,7 @@ case $HOSTNAME in
     xfcehost)
         echo "FAIBASE DEBIAN DEMO XORG XFCE LVM";;
     gnomehost)
-        echo "FAIBASE DEBIAN DHCPC DEMO XORG EASYTEST GNOME";;
+        echo "FAIBASE DEBIAN DEMO XORG EASYTEST GNOME";;
     ubuntuhost)
         echo "FAIBASE DEBIAN DEMO UBUNTU FOCAL FOCAL64 XORG";;
     centos)
