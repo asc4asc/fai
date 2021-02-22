@@ -27,9 +27,9 @@ COMPFILENAME="fai-$COMPHOSTNAME-buster64.raw"
 
 [ -f $COMPFILENAME ] && exit 1
 
-sudo mkdir -p /srv/fai
-sudo rm -r /srv/fai/config
-sudo cp -ar /home/demo/fai.config/config/ /srv/fai/
+# sudo mkdir -p /srv/fai
+# sudo rm -r /srv/fai/config
+# sudo cp -ar /home/demo/fai.config/config/ /srv/fai/
 
 if [ -f /srv/fai/config/basefile/BUSTER* ];
 then
