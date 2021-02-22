@@ -1,2 +1,9 @@
 #!/bin/bash
-sudo brctl addif br0 enp4s0
+INET="enp7s0" # ? SC6/PC6 ? 
+ip link show $INET 2>/dev/null | grep $INET >/dev/null || 
+INET="enp4s0" # SC5 
+ip link show $INET 2>/dev/null | grep $INET >/dev/null || 
+INET="Kein IF!" 
+# echo NET $INET ; exit 0
+
+sudo brctl addif br0 $INET
