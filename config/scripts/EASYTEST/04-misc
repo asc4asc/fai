@@ -10,6 +10,11 @@ fcopy -irv -m=root,root,0755 /usr/local/bin
 
 ifclass DHCPC && ainsl -s /etc/hosts "127.0.0.1 $HOSTNAME"
 
-$ROOTCMD make-auto-login-console # nur wenn keine grafische Oberflaeche?
+$ROOTCMD make-auto-login-console demo # nur wenn keine grafische Oberflaeche?
+
+# ainsl -a /home/demo/.bashrc "sleep 3"
+# ainsl -a /home/demo/.bashrc "get.fai.config.space"
+# ainsl /home/demo/.bashrc "sudo config-fai-server"
+# ainsl /home/demo/.bashrc "mv .bashrc old.bashrc # /var/tmp?? "
 
 exit $error
