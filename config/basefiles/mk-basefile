@@ -30,6 +30,7 @@ EXCLUDE_JESSIE=info
 EXCLUDE_STRETCH=info
 EXCLUDE_BUSTER=
 EXCLUDE_BULLSEYE=
+EXCLUDE_BOOKWORM=
 EXCLUDE_SID=
 
 EXCLUDE_TRUSTY=dhcp3-client,dhcp3-common,info
@@ -51,7 +52,7 @@ setarch() {
 
 check() {
 
-    if [ `id -u` != 0 ]; then
+    if [ $(id -u) != 0 ]; then
         echo "You must be root to create chroots."
         exit 1
     fi
@@ -220,6 +221,7 @@ prtdists() {
     STRETCH32    STRETCH64
     BUSTER32     BUSTER64
     BULLSEYE32   BULLSEYE64
+    BOOKWORM32   BOOKWORM64
     SID32        SID64
 "
 }
@@ -269,7 +271,7 @@ while getopts ashzJd:kf: opt ; do
         ?) exit 3 ;; # error in option parsing
     esac
 done
-shift $(($OPTIND - 1))
+shift $((OPTIND - 1))
 
 xtmp=$(mktemp --tmpdir -d basefiles.XXXXXXXX)
 if [ $? -eq 1 ]; then
@@ -296,7 +298,7 @@ case "$target" in
     SLC7_64) slc amd64 7 ;;
     TRUSTY*|XENIAL*|BIONIC*|FOCAL*)
         debgeneric $target $MIRROR_UBUNTU ;;
-    SQUEEZE*|WHEEZY*|JESSIE*|STRETCH*|BUSTER*|BULLSEYE*|SID*)
+    SQUEEZE*|WHEEZY*|JESSIE*|STRETCH*|BUSTER*|BULLSEYE*|BOOKWORM*|SID*)
         debgeneric $target $MIRROR_DEBIAN $ARCH;;
     *) echo "Unknown distribution. Aborting."
        prtdists
