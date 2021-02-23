@@ -30,9 +30,9 @@ echo "================================="
 
 # apt -y install git
 
-mkdir -p /home/demo
-cd /home/demo
-git clone --branch main https://github.com/asc4asc/fai.config.git
+# mkdir -p /home/demo
+# cd /home/demo
+# git clone --branch main https://github.com/asc4asc/fai.config.git
 # mv fai.config/* .
 
 # copy the simple examples and pimp my config space
