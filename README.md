@@ -56,3 +56,5 @@ USERNAME="$USER"
 GROUPNAME="$USER" # not correct but ....
 COMPHOSTNAME="faiserver"
 ```
+
+## Git Tips?
