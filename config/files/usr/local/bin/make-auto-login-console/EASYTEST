@@ -10,10 +10,10 @@ REMOVE_FLAG=0
 
 function make_auto_login() {
 mkdir /etc/systemd/system/getty@tty${TTY}.service.d 
-cat > /etc/systemd/system/getty@tty${TTY}.service.d/autologin.conf <<"EOF"
+cat > /etc/systemd/system/getty@tty${TTY}.service.d/autologin.conf <<EOF
 [Service]
 ExecStart=
-ExecStart=-/sbin/agetty --autologin root --noclear %I 38400 linux
+ExecStart=-/sbin/agetty --autologin $USER --noclear %I 38400 linux
 EOF
 }
 
