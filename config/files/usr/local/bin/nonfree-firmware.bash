@@ -1,6 +1,0 @@
-#!/bin/bash
-
-sudo apt-get update 
-sudo apt-get install firmware-realtek
-sudo apt install firmware-linux-nonfree
-sudo apt install firmware-iwlwifi 
