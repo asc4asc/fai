@@ -13,7 +13,7 @@ ifclass DHCPC && ainsl -s /etc/hosts "127.0.0.1 $HOSTNAME"
 ifclass XORG || $ROOTCMD make-auto-login-console demo # nur wenn keine grafische Oberflaeche.
 
 ifclass XORG || ainsl -a /home/demo/.bashrc "sleep 3"
-ifclass XORG || ainsl -a /home/demo/.bashrc "get.fai.config.space"
+ifclass XORG || ainsl -a /home/demo/.bashrc "get-fai-config-space.bash"
 ifclass XORG || ainsl /home/demo/.bashrc "sudo config-fai-server"
 ifclass XORG || ainsl /home/demo/.bashrc "# mv .bashrc old.bashrc # /var/tmp?? "
 
