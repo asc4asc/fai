@@ -1,3 +1,0 @@
-sleep 3
-config-fai-server
-mv .bashrc old.bashrc # /var/tmp??
