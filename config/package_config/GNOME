@@ -4,6 +4,7 @@ firefox-esr
 #thunderbird
 menu gdm3
 gnome-core
-gconf-editor
 gnome-screensaver gnome-system-monitor gnome-system-tools
 network-manager-gnome
+# class FAIGNOME?  
+qemu-utils bridge-utils qemu-kvm qemu-system-gui
