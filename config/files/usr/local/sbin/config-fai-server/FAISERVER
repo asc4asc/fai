@@ -99,7 +99,7 @@ done
 fai-monitor > /var/log/fai/fai-monitor.log &
 
 # move me away
-mv $0 /var/tmp
+# mv $0 /var/tmp
 
 # create new rc.local for next reboot
 echo '#! /bin/bash' > /etc/rc.local
