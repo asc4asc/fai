@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /home/demo
+git clone --branch main https://github.com/asc4asc/fai.config.git
