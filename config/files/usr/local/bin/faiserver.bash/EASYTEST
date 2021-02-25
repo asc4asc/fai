@@ -49,6 +49,8 @@ ip addr|grep $INET || exit 1
 sudo brctl show |grep tap1 >/dev/null || sudo fai-mk-network -i $INET $USERNAME
 fai-kvm disk $COMPFILENAME &
 
+fai-add-bridge
+
 echo "Please wait for faiserver is ready!" 
 read 
 fai-kvm -NVn -u 2 pxe & # Test Installation
