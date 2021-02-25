@@ -3,6 +3,6 @@
 cd /boot/efi/efi || exit 1
 cp -ar debian BOOT
 cd BOOT
-cp -a shim64.efi BOOTX64.efi
+cp -a shimx64.efi BOOTX64.efi
 
 exit 0 
