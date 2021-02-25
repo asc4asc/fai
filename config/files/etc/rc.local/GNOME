@@ -1,6 +1,0 @@
-#! /bin/bash
-
-set.gdm.autostart
-sudo -u demo make.startterm
-
-# rm $0
