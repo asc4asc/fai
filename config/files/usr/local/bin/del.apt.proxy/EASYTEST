@@ -1,4 +1,0 @@
-#!/bin/bash
-sudo rm /etc/apt/apt.conf.d/02proxy 
-sudo apt update
-sudo apt upgrade
