@@ -1,3 +1,6 @@
 #!/bin/bash
+
+BRANCH="main"
+[ $1 ] && BRANCH="$1" 
 cd /home/demo 
-[ -d fai.config ] || git clone --branch main https://github.com/asc4asc/fai.config.git
+[ -d fai.config ] || git clone --branch $BRANCH https://github.com/asc4asc/fai.config.git
