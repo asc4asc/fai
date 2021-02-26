@@ -8,3 +8,4 @@ Examples: good???
 * 09-add-loguser-to-fai.conf
 * 70-set-hostname
 * 80-add-hostname-to-hosts
+* 11-misc-setup-fai / Fuer alles was noch nicht klar umrissen ist was es wo wofuer tut.
