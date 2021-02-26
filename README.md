@@ -8,7 +8,6 @@ git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copie
 * Idee: Auf den Rechnern verschiedene Config Space oder Branch als Benutzer organisieren. z.B. faiserver, bridge, dhcpserver, ... faiorg .... 
 * Verteilung der dateien/Änderungen und den Rücktransport ins git organisieren.
 * split der faiserver.bash datei in generate teil und start clients teil.
-* faiserver eigenständig betreiben nicht immer neu erzeugen auch fai config space dort verwalten.
 * Tastatur de wenigstens bei fai-disk dirinstall aus dem host auslesen und als Klasse übergeben. Klasse: KBDE
 * Statt copieren besser link auf user home Verzeichniss mit git daten?
 
