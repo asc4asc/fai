@@ -25,6 +25,7 @@ firmware-iwlwifi firmware-libertas firmware-ralink firmware-zd1211
 firmware-brcm80211 firmware-ti-connectivity
 firmware-netronome firmware-netxen firmware-realtek
 firmware-cavium
+firmware-misc-nonfree
 # firmware-ipw2x00 # needs a debconf question
 
 PACKAGES install I386
