@@ -1,13 +1,14 @@
 #!/bin/bash
-echo "keyboard-configuration  keyboard-configuration/modelcode        string pc105
-keyboard-configuration  keyboard-configuration/xkb-keymap       select de
-keyboard-configuration  keyboard-configuration/variant  select Germany
-keyboard-configuration  keyboard-configuration/model    select Generic 105-key (Intl) PC
-keyboard-configuration  keyboard-configuration/layoutcode       string de
-keyboard-configuration  keyboard-configuration/optionscode      string ctrl:nocaps,terminate:ctrl_alt_bksp" |debconf-set-selections 
+echo "keyboard-configuration  keyboard-configuration/modelcode        string pc105" |debconf-set-selections 
+echo "keyboard-configuration  keyboard-configuration/xkb-keymap       select de" |debconf-set-selections 
+echo "keyboard-configuration  keyboard-configuration/variant  select Germany" |debconf-set-selections 
+echo "keyboard-configuration  keyboard-configuration/model    select Generic 105-key (Intl) PC" |debconf-set-selections 
+echo "keyboard-configuration  keyboard-configuration/layoutcode       string de" |debconf-set-selections 
+echo "keyboard-configuration  keyboard-configuration/optionscode      string ctrl:nocaps,terminate:ctrl_alt_bksp" |debconf-set-selections 
 
 dpkg-reconfigure keyboard-configuration -f noninteractive
 # debconf-get-selections | grep keyboard-configuration
 # dpkg-reconfigure keyboard-configuration
-# setupcon -v
+setupcon -v
 # loadkeys de # leider fehlt die Datei.
+"
