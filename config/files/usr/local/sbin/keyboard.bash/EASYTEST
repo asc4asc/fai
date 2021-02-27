@@ -1,2 +1,4 @@
 #!/bin/bash
 dpkg-reconfigure keyboard-configuration
+setupcon -v
+# loadkeys de # leider fehlt die Datei.
