@@ -49,4 +49,16 @@ GROUPNAME="$USER" # not correct but ....
 COMPHOSTNAME="faiserver"
 ```
 
-## Git Tips?
+#### Aus fai-doc Help to find all classes.
+
+If you want to find all files (except hostnames) that are classes try:
+   find /srv/fai/config -type f | egrep '/[[:upper:][:digit:]_]+$'
+
+In cfengine scripts you can find class names using:
+   egrep -r '[[:upper:][:digit:]_]+::' /srv/fai/config
+
+Shell scripts are using the commad ifclass. So use:
+   egrep -r 'ifclass[[:space:]]+[[:upper:][:digit:]_]+' /srv/fai/config
+
+
+In the log files? Internal Classes like DEFAULT,LINUX,AMD64,DHCPC,LAST 
