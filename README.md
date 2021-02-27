@@ -1,7 +1,7 @@
 # fai
 Neuer Versuch fai config files
 
-git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copieren.
+git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copieren oder link?
 
 ## ToDo
 * Geht das? Git technik "late branch" "tag" "work in main" problem rename main to tag.
