@@ -11,6 +11,7 @@ Examples: good???
 * 11-misc-setup-fai / Fuer alles was noch nicht klar umrissen ist was es wo wofuer tut.
 
 # Teste mal!
+Feste IP Network Manager.
 ```
 Die o.g. Veränderung des Abschnitts [ipv4] erreicht man durch diese Befehlsfolge:
 
