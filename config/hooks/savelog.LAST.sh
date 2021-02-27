@@ -196,7 +196,7 @@ fi
 # Here you can define your own patterns. Put one pattern in a line,
 # do not create empty lines.
 myerrorpatterns="X_X-X_XX"
-myignorepatterns="X_X-X_XX"
+myignorepatterns="eth0: Failed to rename network interface 2"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # The main routine
 errorpatterns="$globalerrorpatterns
