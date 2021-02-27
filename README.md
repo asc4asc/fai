@@ -7,18 +7,11 @@ git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copie
 * Geht das? Git technik "late branch" "tag" "work in main" problem rename main to tag.
 * Idee: Auf den Rechnern verschiedene Config Space oder Branch als Benutzer organisieren. z.B. faiserver, bridge, dhcpserver, ... faiorg .... 
 * Verteilung der dateien/Änderungen und den Rücktransport ins git organisieren.
-* split der faiserver.bash datei in generate teil und start clients teil.
 * Tastatur de wenigstens bei fai-disk dirinstall aus dem host auslesen und als Klasse übergeben. Klasse: KBDE
 * Statt copieren besser link auf user home Verzeichniss mit git daten?
 
-#### zum laufen bringen:
-* Debian 10 per faime installiert dann git ....
-* fai-diskimage / auch als raw und dann per dd if=fai-gnomehost-buster64.raw of=/dev/device status=progress
-* Update des images auf "bullseye"
 ```
 fai Server per diskimage installiert.
-
-So etwas wie faime um z.B. neuen usbstick zu generieren. Oder wirtuelle maschine
 
 fai-me: Zusatzpakete: git / Password fai / User demo 
 ```
@@ -28,14 +21,14 @@ fai-me: Zusatzpakete: git / Password fai / User demo
 * fai softupdate
 
 ## Idee so
-* Möglichts alles als Utility in /usr/locasl/ (moeglichst hin und wieder entfernen) (Wenn nötig doppelten Aufruf verhindern.) (Löschen wenn fertig?)
+* Möglichts alles als Utility in /usr/local/ (möglichst hin und wieder entfernen?) (Wenn nötig doppelten Aufruf verhindern.) (Löschen wenn fertig?)
 * Möglichst einfach passend zu Klassen z.B GNOME:GDM:EASYTEST.... Moeglichkeit alle Utilitys zum testen oder nur das was funktioniert laden.
 
 ## Gedanken zu Klassen
 * FAI Klassen steuern den Installationsprozess. z.B FAIBASE, DEBIAN, BUSTER64
-* Admin Klassen sagen wie wahrscheinlich konfigurirt wird. z.B. SYSTEMD, GDM 
- * Alternative Admin KLassen: NETWORMANAGER,NETPLAN,INTERFACES,SYSTEMD
-* Steuer Klassen z.B. DEMO, ...
+* Admin Klassen sagen wie wahrscheinlich konfigurirt wird. z.B. NETWORK(DHCPC), SYSTEMD, GDM, GNOME 
+ * Alternative Admin KLassen z.B. Netzwerk: NETWORMANAGER,NETPLAN,INTERFACES,SYSTEMD (Steuerklasse: z.B. FIXIP)
+* Steuer Klassen z.B. DEMO, LABOR, EASYTEST, ...
 
 ## Config var File
 * SC5,SC6,PC6,Laptop,... Seriennummer?
