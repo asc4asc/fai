@@ -10,5 +10,5 @@ case $HOSTNAME in
     demohost|client*)
         echo "FAIBASE DEBIAN DEMO LABOR NETWORMANAGER EASYTEST" ;;	
     *)
-        echo "FAIBASE DEBIAN DEMO" ;;
+        echo "FAIBASE DEBIAN DEMO LABOR" ;;
 esac
