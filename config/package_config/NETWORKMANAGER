@@ -1,0 +1,5 @@
+# some packages we need for this NETWORK config
+
+PACKAGES install-norec
+network-manager
+

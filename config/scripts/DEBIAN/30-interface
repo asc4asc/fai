@@ -1,5 +1,6 @@
 #! /bin/bash
 
+
 netplan_yaml() {
     # network configuration using ubuntu's netplan.io
     local IFNAME="$1"
@@ -88,6 +89,8 @@ case "$FAI_ACTION" in
   install|dirinstall)
     ifclass DHCPC && METHOD=dhcp || METHOD=static
     ifclass XORG && RENDERER=NetworkManager || RENDERER=networkd
+    ifclass NETWORKMANAGER && RENDERER=NetworkManager || RENDERER=networkd
+
 
     if [ -d $target/etc/netplan ]; then
         # Ubuntu >= 17.10 with netplan.io
