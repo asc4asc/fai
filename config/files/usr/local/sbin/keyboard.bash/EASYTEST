@@ -6,7 +6,7 @@ echo "keyboard-configuration  keyboard-configuration/model    select Generic 105
 echo "keyboard-configuration  keyboard-configuration/layoutcode       string de" |debconf-set-selections 
 echo "keyboard-configuration  keyboard-configuration/optionscode      string ctrl:nocaps,terminate:ctrl_alt_bksp" |debconf-set-selections 
 
-dpkg-reconfigure keyboard-configuration -f noninteractive
+dpkg-reconfigure keyboard-configuration # -f noninteractive
 # debconf-get-selections | grep keyboard-configuration
 # dpkg-reconfigure keyboard-configuration
 setupcon -v
