@@ -5,7 +5,7 @@ Short: just a very simple example, no xorg, an account called demo
 Long: This is the demohost example of FAI.
 Additional account called demo with password: fai, root password: fai
 All needed packages are already on the CD or USB stick.
-Classes: INSTALL FAIBASE DEBIAN DEMO
+Classes: INSTALL FAIBASE DEBIAN DEMO LABOR NETWORMANAGER 
 
 Name: Inventory
 Description: Show hardware info
