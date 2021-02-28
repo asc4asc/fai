@@ -8,6 +8,8 @@ Short test with fai-net (faiserver.bash)
 
 Add ethernet interface as a bridge to faiserver (faiserver.bash). Install a new gnome computer form FAI. (Goto: START:) 
 
+Use the SIMPLE branch for easy understanding fai config spaces. (Not as easy as possible in the moment. :-) )
+
 # More infos only for me to remember. Sorry for German/Englisch mix.
 
 git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copieren oder link?
