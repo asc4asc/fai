@@ -9,8 +9,5 @@ else
     $ROOTCMD usermod -L root
 fi
 
-ainsl -a etc/sudoers.d/gen4testing 'demo ALL=(ALL:ALL) NOPASSWD:ALL' 
-$ROOTCMD chmod 0440 /etc/sudoers.d/gen4testing
-
 exit $error
 

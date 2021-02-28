@@ -1,0 +1,9 @@
+#! /bin/bash
+
+error=0; trap 'error=$(($?>$error?$?:$error))' ERR # save maximum error code
+
+ainsl -a etc/sudoers.d/gen4testing 'demo ALL=(ALL:ALL) NOPASSWD:ALL' 
+$ROOTCMD chmod 0440 /etc/sudoers.d/gen4testing
+
+exit $error
+
