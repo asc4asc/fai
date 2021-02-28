@@ -50,7 +50,7 @@ COMPHOSTNAME="faiserver"
 ```
 
 #### Aus fai-doc Help to find all classes.
-
+```
 If you want to find all files (except hostnames) that are classes try:
    find /srv/fai/config -type f | egrep '/[[:upper:][:digit:]_]+$'
 
@@ -60,5 +60,17 @@ In cfengine scripts you can find class names using:
 Shell scripts are using the commad ifclass. So use:
    egrep -r 'ifclass[[:space:]]+[[:upper:][:digit:]_]+' /srv/fai/config
 
-
+```
 In the log files? Internal Classes like DEFAULT,LINUX,AMD64,DHCPC,LAST 
+
+#### Class config (files) ist wo möglich?
+Alternativ:
+* Configspace: class/50-host-classes
+* Configspace: class/example.profile
+* Im fai-diskimage aufruf.
+In allen Files in Configspace: class autodetect z.b. EFI classes 
+
+Selten benutzt:
+Kernel comand line! (z.b. pxe boot) / Besser Rechername und dann 50-host-classes .... 
+
+
