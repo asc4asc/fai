@@ -40,13 +40,13 @@ else
   # sudo rm BUSTER*
 fi
 
-cl='AMD64,FAIBASE,DEBIAN,BUSTER64,DEMO,FAISERVER,EASYTEST,NETWORKMANAGER,LABOR,GRUB_PC'
-sudo fai-diskimage -v -S10G --hostname faiserver -c$cl $COMPFILENAME
+cl='AMD64,FAIBASE,DEBIAN,BUSTER64,DEMO,EASYTEST,NETWORKMANAGER,LABOR,GRUB_PC'
+sudo fai-diskimage -v -S10G --hostname $COMPHOSTNAME -c$cl $COMPFILENAME
 sudo chown $USERNAME.$GROUPNAME $COMPFILENAME
 
 ping -c 1 google.com || exit 1
 ip addr|grep $INET || exit 1
 sudo brctl show |grep tap1 >/dev/null || sudo fai-mk-network -i $INET $USERNAME
-fai-kvm disk $COMPFILENAME &
+fai-kvm -u9 disk $COMPFILENAME &
 read 
 
