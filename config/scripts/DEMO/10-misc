@@ -18,7 +18,7 @@ fi
 if [ -n "$username" ]; then
     if ! $ROOTCMD getent passwd $username ; then
 	$ROOTCMD adduser --disabled-login --gecos "$username user" $username
-	$ROOTCMD usermod -p "$USERPW" $username
+	ifclass LABOR && $ROOTCMD usermod -p "$USERPW" $username
 	userdir=$($ROOTCMD getent passwd "$username" | cut -d: -f6 )
 
 	# disable xfce question about default or empty panel
