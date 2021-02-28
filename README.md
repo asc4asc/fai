@@ -1,10 +1,20 @@
-# fai
+# fai config for ?
 Neuer Versuch fai config files
+
+START: Gnome computer from config space with fai installed. (not so easy if gnome with faime installed but possibe after installing missing packages)
+
+With fai-diskimage (faiserver.bash) installed fai server.
+Short test with fai-net (faiserver.bash)
+
+Add ethernet interface as a bridge to faiserver (faiserver.bash). Install a new gnome computer form FAI. (Goto: START:) 
+
+Use the SIMPLE branch for easy understanding fai config spaces. (Not as easy as possible in the moment. :-) )
+
+# More infos only for me to remember. Sorry for German/Englisch mix.
 
 git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copieren oder link?
 
 ## ToDo
-* Geht das? Git technik "late branch" "tag" "work in main" problem rename main to tag.
 * Idee: Auf den Rechnern verschiedene Config Space oder Branch als Benutzer organisieren. z.B. faiserver, bridge, dhcpserver, ... faiorg .... 
 * Verteilung der dateien/Änderungen und den Rücktransport ins git organisieren.
 * Tastatur de wenigstens bei fai-disk dirinstall aus dem host auslesen und als Klasse übergeben. Klasse: KBDE
