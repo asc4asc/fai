@@ -1,4 +1,4 @@
-# fai
+# fai config for ?
 Neuer Versuch fai config files
 
 START: Gnome computer from config space with fai installed. (not so easy if gnome with faime installed but possibe after installing missing packages)
@@ -6,7 +6,7 @@ START: Gnome computer from config space with fai installed. (not so easy if gnom
 With fai-diskimage (faiserver.bash) installed fai server.
 Short test with fai-net (faiserver.bash)
 
-Add ethernet as a bridge. Install a new gnome computer form FAI. (Goto: START:) 
+Add ethernet interface as a bridge to faiserver (faiserver.bash). Install a new gnome computer form FAI. (Goto: START:) 
 
 # More infos only for me to remember. Sorry for German/Englisch mix.
 
