@@ -3,4 +3,4 @@ sudo mkdir -p /srv/fai
 cd /srv/fai 
 [ -f config ] || sudo mv config config.$RANDOM
 sudo cp -ar /home/demo/fai.config/config config
-cd /home/demo/fai.config && git branch -v >> /srv/fai/config/files/etc/motd/FAIBASE # Idee 
+# cd /home/demo/fai.config && git branch -v >> /srv/fai/config/files/etc/motd/FAIBASE # Idee 
