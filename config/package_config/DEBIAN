@@ -3,7 +3,6 @@ apt-transport-https # is only needed for stretch
 debconf-utils
 file
 less
-linuxlogo
 rsync
 openssh-client openssh-server
 time
