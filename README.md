@@ -83,4 +83,25 @@ In allen Files in Configspace: class autodetect z.b. EFI classes
 Selten benutzt:
 Kernel comand line! (z.b. pxe boot) / Besser Rechername und dann 50-host-classes .... 
 
+#### fai-cd Anmerkungen 
+auf gnomehost probiert mit fai und kvm
 
+```
+sudo apt install dosfstools
+sudo apt install mtools
+sudo fai-make-nfsroot
+sudo fai-cd -JAg /etc/fai/grub.cfg.autodiscover fai-autod.iso
+sudo fdisk -l
+sudo dd if=fai-autod.iso of=/dev/sdb status=progress
+sudo sync
+
+sudo fai-cd -BMJe fai-cd.iso
+
+git checkout SIMPLE
+git status
+copy-fai-config-space.bash 
+
+sudo fai-mirror -v /srv/files/scratch/mirror
+sudo fai-cd -m /srv/files/scratch/mirror/ fai-cd.iso
+sudo dd if=fai-cd.iso of=/dev/sdb status=progress
+```
