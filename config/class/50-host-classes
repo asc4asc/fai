@@ -8,25 +8,11 @@
 # use a list of classes for our demo machine
 case $HOSTNAME in
     faiserver)
-        echo "FAIBASE DEBIAN DEMO FAISERVER" ;;
+        echo "FAIBASE DEBIAN DEMO EASYTEST FAISERVER" ;;
     demohost|client*)
-        echo "FAIBASE DEBIAN DEMO" ;;
-    xfcehost)
-        echo "FAIBASE DEBIAN DEMO XORG XFCE LVM";;
+        echo "FAIBASE DEBIAN DEMO EASYTEST" ;;
     gnomehost)
         echo "FAIBASE DEBIAN DEMO XORG EASYTEST GNOME NONFREE";;
-    ubuntuhost)
-        echo "FAIBASE DEBIAN DEMO UBUNTU FOCAL FOCAL64 XORG";;
-    centos)
-        echo "FAIBASE CENTOS"   # you may want to add class XORG here
-        ifclass AMD64 && echo CENTOS8_64
-	;;
-    slchost)
-        # Scientific Linux Cern, is very similar to CentOS. SLC should alsways use the class CENTOS
-        echo "FAIBASE CENTOS SLC"  # you may want to add class XORG here
-        ifclass I386 && echo SLC7_32
-        ifclass AMD64 && echo SLC7_64
-	;;
-    *)
+     *)
         echo "FAIBASE DEBIAN DEMO" ;;
 esac
