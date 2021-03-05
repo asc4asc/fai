@@ -7,6 +7,14 @@ Additional account called demo with password: fai, root password: fai
 All needed packages are already on the CD or USB stick.
 Classes: INSTALL FAIBASE DEBIAN EASYTEST DEMO
 
+Name: Faiserver
+Description: Fai server installation
+Short: A fai server with .......
+Long: A fai server with ........
+Additional account called demo with password: fai, root password: fai
+All needed packages are already on the CD or USB stick.
+Classes: INSTALL FAIBASE DEBIAN EASYTEST DEMO FAISERVER
+
 Name: Xfce
 Description: Xfce desktop, LVM partitioning
 Short: A fancy Xfce desktop will be installed, the user account is demo
