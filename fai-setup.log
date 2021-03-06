@@ -1,0 +1,20 @@
+FAI packages and related packages inside the nfsroot:
+dracut             051-1
+dracut-live        051-1
+dracut-network     051-1
+dracut-squash      051-1
+fai-client         5.10
+fai-nfsroot        5.10
+fai-setup-storage  5.10
+Waiting for background jobs to finish
+[1]+  Done                    nice xz -q $NFSROOT/var/tmp/base.tar  (wd: /srv/fai/nfsroot)
+fai-make-nfsroot finished properly.
+Log file written to /var/log/fai/fai-make-nfsroot.log and /srv/fai/nfsroot/var/tmp
+Adding line to /etc/exports: /srv/fai/config 127.0.0.1/8
+192.168.33.250/24(async,ro,no_subtree_check)
+Adding line to /etc/exports: /srv/fai/nfsroot 127.0.0.1/8
+192.168.33.250/24(async,ro,no_subtree_check,no_root_squash)
+Job for nfs-server.service failed.
+See "systemctl status nfs-server.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript nfs-kernel-server, action "reload" failed.
+Log file written to /var/log/fai/fai-setup.log
