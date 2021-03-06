@@ -1,0 +1,10 @@
+#! /bin/bash
+
+fai-monitor > /var/log/fai/fai-monitor.log &
+
+# create new rc.local for next reboot
+echo '#! /bin/bash' > /etc/rc.local
+echo 'fai-monitor > /var/log/fai/fai-monitor.log &' >> /etc/rc.local
+chmod a+rx /etc/rc.local
+
+exit 0
