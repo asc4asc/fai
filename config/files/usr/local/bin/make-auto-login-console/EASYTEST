@@ -10,7 +10,7 @@ REMOVE_FLAG=0
 SUDO_FLAG=0
 
 function make_auto_login() {
-if [ -d /etc/systemd/system/getty@tty${TTY}.service.d ] ; then 
+if [ ! -d /etc/systemd/system/getty@tty${TTY}.service.d ] ; then 
 mkdir /etc/systemd/system/getty@tty${TTY}.service.d 
 cat > /etc/systemd/system/getty@tty${TTY}.service.d/autologin.conf <<EOF
 [Service]
