@@ -19,12 +19,12 @@ EOF
 
 function write_sudo_file() {
 [ -f /etc/sudoers.d/gen4testing ] || echo "$USER ALL=(ALL:ALL) NOPASSWD:ALL" >/etc/sudoers.d/gen4testing
+chmod 0440 /etc/sudoers.d/gen4testing
 exit 0;
 }
 
 function rm_sudo_file() {
-[ -f /etc/sudoers.d/gen4testing ] && rm -r /etc/sudoers.d/gen4testing
-[ -f /etc/sudoers.d/gen4testing ] && chmod 0440 /etc/sudoers.d/gen4testing
+# [ -f /etc/sudoers.d/gen4testing ] && rm -r /etc/sudoers.d/gen4testing
 exit 0;
 }
 
@@ -44,6 +44,7 @@ usage() {
 	-e enable autologin
 	-d remove autologin
 	-r remove autologin
+	-s enable sudo without passwd
 
 	Default <user> is root.
 EOF
@@ -57,7 +58,7 @@ while getopts "edrvh?t:" opt ; do
     case "$opt" in
 	r|d)	REMOVE_FLAG=1 ;;
 	e)	REMOVE_FLAG=0 ;;
-	s)	SUDO_FLAG=0 ;;
+	s)	SUDO_FLAG=1 ;;
 	v)	verbose=1 v=-v ;;
 	t)	[ ${OPTARG:0:1} = "=" ] && TTY=${OPTARG/=} || TTY=$OPTARG ;;
 	h)	usage ;;
