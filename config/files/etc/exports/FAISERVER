@@ -8,5 +8,5 @@
 # /srv/nfs4        gss/krb5i(rw,sync,fsid=0,crossmnt,no_subtree_check)
 # /srv/nfs4/homes  gss/krb5i(rw,sync,no_subtree_check)
 #
-/srv/fai/config 127.0.0.1/8 192.168.33.250/24(async,ro,no_subtree_check)
-/srv/fai/nfsroot 127.0.0.1/8 192.168.33.250/24(async,ro,no_subtree_check,no_root_squash)
+/srv/fai/config *(async,ro,no_subtree_check)
+/srv/fai/nfsroot *(async,ro,no_subtree_check,no_root_squash)

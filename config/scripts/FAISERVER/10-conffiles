@@ -2,6 +2,7 @@
 
 fcopy -BvrS /etc/fai
 fcopy -BvS /etc/dhcp/dhcpd.conf
+fcopy -BvS /etc/exports
 
 if [ $FAI_ACTION = "install" -o $FAI_ACTION = "dirinstall" ] ; then
 
