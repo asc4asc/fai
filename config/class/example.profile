@@ -5,14 +5,14 @@ Short: just a very simple example, no xorg, an account called demo
 Long: This is one of the demohost example of FAI.
 Additional account called demo with password: fai, root password: fai
 All needed packages are already on the CD or USB stick.
-Classes: INSTALL FAIBASE DEBIAN DEMO LABOR NETWORMANAGER EASYTEST
+Classes: INSTALL FAIBASE DEBIAN DEMO LABOR NETWORKMANAGER EASYTEST
 
 Name: Simple2
 Description: My first FAI installation ohne Labor ( Passwort.... )
 Short: just a very simple example, no xorg, an account called demo
 Long: This is one of the demohost example of FAI.
 All needed packages are already on the CD or USB stick.
-Classes: INSTALL FAIBASE DEBIAN DEMO NETWORMANAGER EASYTEST
+Classes: INSTALL FAIBASE DEBIAN DEMO NETWORKMANAGER EASYTEST
 
 Name: Simple3
 Description: My first FAI installation ohne Labor und ohne NETWORKMANAGER
