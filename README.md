@@ -1,5 +1,4 @@
 # fai config for ?
-Neuer Versuch fai config files
 
 START: Gnome computer from config space with fai installed. (not so easy if gnome with faime installed but possibe after installing missing packages)
 
