@@ -7,6 +7,7 @@ error=0; trap 'error=$(($?>$error?$?:$error))' ERR # save maximum error code
 export LANG=C
 TTY=1
 REMOVE_FLAG=0
+SUDO_FLAG=0
 
 function make_auto_login() {
 mkdir /etc/systemd/system/getty@tty${TTY}.service.d 
@@ -58,7 +59,7 @@ while getopts "sedrvh?t:" opt ; do
     case "$opt" in
 	r|d)	REMOVE_FLAG=1 ;;
 	e)	REMOVE_FLAG=0 ;;
-	s)	SUDO_FLAG=0 ;;
+	s)	SUDO_FLAG=1 ;;
 	v)	verbose=1 v=-v ;;
 	t)	[ ${OPTARG:0:1} = "=" ] && TTY=${OPTARG/=} || TTY=$OPTARG ;;
 	h)	usage ;;
