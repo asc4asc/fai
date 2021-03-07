@@ -10,27 +10,30 @@ REMOVE_FLAG=0
 SUDO_FLAG=0
 
 function make_auto_login() {
+if [ -d /etc/systemd/system/getty@tty${TTY}.service.d ] ; then 
 mkdir /etc/systemd/system/getty@tty${TTY}.service.d 
 cat > /etc/systemd/system/getty@tty${TTY}.service.d/autologin.conf <<EOF
 [Service]
 ExecStart=
 ExecStart=-/sbin/agetty --autologin $USER --noclear %I 38400 linux
 EOF
+fi
 }
 
+
 function write_sudo_file() {
-[ -f /etc/sudoers.d/gen4testing ] || echo "$USER ALL=(ALL:ALL) NOPASSWD:ALL" >/etc/sudoers.d/gen4testing
+[ -f /etc/sudoers.d/gen4testing ] || echo "$USER ALL=(ALL:ALL) NOPASSWD:ALL" >/etc/sudoers.d/gen4testing4$USER
 chmod 0440 /etc/sudoers.d/gen4testing
 exit 0;
 }
 
 function rm_sudo_file() {
-[ -f /etc/sudoers.d/gen4testing ] && rm -r /etc/sudoers.d/gen4testing
+[ -f /etc/sudoers.d/gen4testing ] && rm -r /etc/sudoers.d/gen4testing4$USER
 exit 0;
 }
 
 function rm_auto_login() {
-rm -r /etc/systemd/system/getty@tty${TTY}.service.d 
+[ -d /etc/systemd/system/getty@tty${TTY}.service.d ] && rm -r /etc/systemd/system/getty@tty${TTY}.service.d 
 exit 0;
 }
 
