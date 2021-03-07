@@ -17,6 +17,17 @@ ExecStart=-/sbin/agetty --autologin $USER --noclear %I 38400 linux
 EOF
 }
 
+function write_sudo_file() {
+[ -f /etc/sudoers.d/gen4testing ] || echo "$USER ALL=(ALL:ALL) NOPASSWD:ALL" >/etc/sudoers.d/gen4testing
+exit 0;
+}
+
+function rm_sudo_file() {
+[ -f /etc/sudoers.d/gen4testing ] && rm -r /etc/sudoers.d/gen4testing
+[ -f /etc/sudoers.d/gen4testing ] && chmod 0440 /etc/sudoers.d/gen4testing
+exit 0;
+}
+
 function rm_auto_login() {
 rm -r /etc/systemd/system/getty@tty${TTY}.service.d 
 exit 0;
@@ -46,6 +57,7 @@ while getopts "edrvh?t:" opt ; do
     case "$opt" in
 	r|d)	REMOVE_FLAG=1 ;;
 	e)	REMOVE_FLAG=0 ;;
+	s)	SUDO_FLAG=0 ;;
 	v)	verbose=1 v=-v ;;
 	t)	[ ${OPTARG:0:1} = "=" ] && TTY=${OPTARG/=} || TTY=$OPTARG ;;
 	h)	usage ;;
@@ -62,6 +74,13 @@ then
 	make_auto_login
 else 
 	rm_auto_login 
+fi
+
+if [[ ${SUDO_FLAG} == 0 ]] 
+then  
+	write_sudo_file
+else 
+	rm_sudo_file
 fi
 
 exit $error
