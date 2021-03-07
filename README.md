@@ -2,6 +2,8 @@ tty zum unterscheiden der Terminals
 
 lock files zum verriegen und Anzahl begrenzen.
 
+/etc/skel files fuer z.b. demo user.
+
 
 # fai config for ?
 
