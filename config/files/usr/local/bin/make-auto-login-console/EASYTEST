@@ -54,7 +54,7 @@ exit 0
 options=$@ # save all options
 
 # Parse commandline options
-while getopts "edrvh?t:" opt ; do
+while getopts "sedrvh?t:" opt ; do
     case "$opt" in
 	r|d)	REMOVE_FLAG=1 ;;
 	e)	REMOVE_FLAG=0 ;;
