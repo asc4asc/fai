@@ -23,7 +23,7 @@ fi
 
 function write_sudo_file() {
 [ -f /etc/sudoers.d/gen4testing4$USER ] || echo "$USER ALL=(ALL:ALL) NOPASSWD:ALL" >/etc/sudoers.d/gen4testing4$USER
-chmod 0440 /etc/sudoers.d/gen4testing
+chmod 0440 /etc/sudoers.d/gen4testing4$USER
 exit 0;
 }
 
