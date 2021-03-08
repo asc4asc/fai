@@ -20,11 +20,6 @@ ifclass XORG && $ROOTCMD chmod 0440 /etc/sudoers.d/gen4testing
 
 ainsl -a /home/demo/.bashrc "echo execute bashrc on tty:; tty ; sleep 3"
 
-# lock files zum verriegen und Anzahl begrenzen.
-# /etc/skel/ files z.B. .bashrc fuer z.b. demo user.
-# The location of /etc/skel can be changed by editing the line that begins with SKEL= in the configuration file /etc/default/useradd. By default this line says SKEL=/etc/skel. 
-fcopy -irv -m=root,root,0755 /etc/skel
-
 ifclass FAISERVER && ainsl -a /home/demo/.bashrc "get-fai-config-space.bash"
 ifclass FAISERVER && ainsl /home/demo/.bashrc "sudo config-fai-server"
 ifclass FAISERVER && ainsl /home/demo/.bashrc "mv .bashrc old.bashrc # /var/tmp?? "
