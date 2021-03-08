@@ -18,11 +18,10 @@ ifclass XORG && $ROOTCMD chmod 0440 /etc/sudoers.d/gen4testing
 
 # this simply start scripts may be there is a nicer way  
 
-ainsl -a /home/demo/.bashrc "echo execute bashrc; sleep 3"
+ainsl -a /home/demo/.bashrc "echo execute bashrc on tty:; tty ; sleep 3"
 ifclass FAISERVER && ainsl -a /home/demo/.bashrc "get-fai-config-space.bash"
 ifclass FAISERVER && ainsl /home/demo/.bashrc "sudo config-fai-server"
 ifclass FAISERVER && ainsl /home/demo/.bashrc "mv .bashrc old.bashrc # /var/tmp?? "
-
 
 exit $error
 
