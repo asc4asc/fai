@@ -1,0 +1,2 @@
+#!/bin/bash
+get.fai.config.space && bash -x faiserver.bash;
