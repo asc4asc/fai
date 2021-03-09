@@ -9,6 +9,7 @@ error=0; trap 'error=$(($?>$error?$?:$error))' ERR # save maximum error code
 
 # ainsl -a /etc/default/useradd "SKEL=/usr/local/etc/skel.toor"
 fcopy -irv -m=root,root,0755 /etc/skel
+# fcopy -irv -m=root,root,0755 /usr/local/etc
 
 exit $error
 
