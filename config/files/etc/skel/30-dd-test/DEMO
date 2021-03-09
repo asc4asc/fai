@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo dd if=/dev/sda of=/dev/null bs=1M iflag=direct status=progress count=1000 # quick read performance test disk with dd.

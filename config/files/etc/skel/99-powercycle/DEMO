@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo rtcwake -s 20 -m off # powercycle 
