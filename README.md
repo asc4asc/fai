@@ -11,6 +11,11 @@ Use the SIMPLE branch for easy understanding fai config spaces. (Not as easy as 
 
 # More infos only for me to remember. Sorry for German/Englisch mix.
 
+## Try to save all information about bild. / save to motd !!!
+git describe --tags --long # version
+git status # branch
+ip addr # Host mit MAC / Platte ??? / Virtuelle Installation SID? / Maschine ID
+
 git clone https://github.com/asc4asc/fai.config.git # config nach /srv/fai copieren oder link?
 
 ## ToDo
