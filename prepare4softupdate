@@ -1,0 +1,7 @@
+Kategorie LAB!!! Test von softupdate!
+
+install ssh 
+
+copy nfsroot/root/.ssh/  nach /root/.ssh/ # unsecure like NFS.
+
+add 192.168.33.250 faiserver to hostfile 
