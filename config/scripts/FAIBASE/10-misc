@@ -18,7 +18,10 @@ if [ -n "$IPADDR" ]; then
     ifclass DHCPC || ainsl -s /etc/hosts "$IPADDR $HOSTNAME.$DOMAIN $HOSTNAME"
 else
     ifclass DHCPC && ainsl -s /etc/hosts "127.0.0.1 $HOSTNAME"
-fi
+fi 
+
+# ifclass FAISERVER || ainsl -s /etc/hosts "192.168.33.250 faiserver.$DOMAIN faiserver"  # if no DNS for internel hosts only for clients that stay in fai net
+
 fcopy -iM /etc/hosts /etc/motd
 
 # make /root accessible only by root
