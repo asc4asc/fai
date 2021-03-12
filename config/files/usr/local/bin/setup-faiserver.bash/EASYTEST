@@ -3,6 +3,10 @@
 
 ping -c 1 google.com || exit 1
 
+get-fai-config-space.bash
+
+copy-fai-config-space.bash 
+
 # INET="enp8s0" # better probe for interface to the internet (default gw?) 
 # INET="enx00e04c68353b" # 
 # INET="enp4s0" # SC5 Port unten  
