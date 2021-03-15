@@ -8,7 +8,7 @@ error=0; trap 'error=$(($?>$error?$?:$error))' ERR # save maximum error code
 fcopy -irv -m=root,root,0755 /usr/local/sbin
 fcopy -irv -m=root,root,0755 /usr/local/bin
 
-ifclass DHCPC && ainsl -s /etc/hosts "127.0.0.1 $HOSTNAME"
+ainsl -s /etc/hosts "127.0.0.1 $HOSTNAME"
 
 ifclass XORG || $ROOTCMD make-auto-login-console demo # nur wenn keine grafische Oberflaeche.
 
