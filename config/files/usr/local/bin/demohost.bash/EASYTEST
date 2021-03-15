@@ -46,7 +46,8 @@ sudo chown $USERNAME.$GROUPNAME $COMPFILENAME
 
 ping -c 1 google.com || exit 1
 ip addr|grep $INET || exit 1
-sudo brctl show |grep tap1 >/dev/null || sudo fai-mk-network -i $INET $USERNAME
+sudo brctl show |grep tap1 >/dev/null || sudo fai-mk-network -i $INET $USERNAME # beim Wechsel muss z.B. Bridge auch restartet werden.
+# sudo brctl show |grep tap1 >/dev/null || sudo fai-mk-network -P -i $INET $USERNAME
 fai-kvm -u9 disk $COMPFILENAME &
 read 
 
