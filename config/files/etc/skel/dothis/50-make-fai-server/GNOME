@@ -1,2 +1,4 @@
 #!/bin/bash
 get.fai.config.space && bash -x setup-faiserver.bash;
+
+mv $0 $0.no

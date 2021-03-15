@@ -11,3 +11,5 @@ gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type "nothing"
 
+mv $0 $0.no
+
