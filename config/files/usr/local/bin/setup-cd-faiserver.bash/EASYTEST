@@ -58,7 +58,7 @@ ping -c 1 google.com || exit 1
 ip addr|grep $INET || exit 1
 sudo brctl show |grep tap1 >/dev/null || sudo fai-mk-network -i $INET $USERNAME
 # fai-kvm disk $COMPFILENAME &
-fai-kvm -NVn -u 1 cd fai-cd.iso -D $COMPFILENAME &
+fai-kvm -NV -u 1 -D /home/${USERNAME} cd fai-cd.iso  &
 
 fai-add-bridge
 
