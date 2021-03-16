@@ -1,3 +1,4 @@
 #!/bin/bash
 wget https://gitlab/test-tools/make-auto-login-console/raw/master/make-auto-login-console
+sudo apt install libc6-i386
 wget https://gitlab/EKF_Tools/extern/progspi/raw/master/progspi
