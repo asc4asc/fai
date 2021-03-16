@@ -26,6 +26,7 @@ COMPFILENAME="fai-$COMPHOSTNAME-buster64.raw"
 ping -c 1 google.com || exit 1
 ip addr|grep $INET || exit 1
 sudo brctl show |grep tap1 >/dev/null || sudo fai-mk-network -i $INET $USERNAME
+[ -f faitest-disk-1-1.qcow2 ] && qemu-img convert faitest-disk-1-1.qcow2 $COMPFILENAME && rm faitest-disk-1-1.qcow2
 fai-kvm disk $COMPFILENAME &
 
 fai-add-bridge
