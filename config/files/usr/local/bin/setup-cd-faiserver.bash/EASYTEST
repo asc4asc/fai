@@ -34,6 +34,7 @@ COMPFILENAME="fai-$COMPHOSTNAME-buster64.raw"
 sudo apt install mtools
 sudo apt install dosfstools
 
+sudo fai-make-nfsroot -v
 sudo fai-mirror -v /srv/files/scratch/mirror # >log.txt 2>error.txt
 sudo fai-cd -m /srv/files/scratch/mirror/ fai-cd.iso
 
