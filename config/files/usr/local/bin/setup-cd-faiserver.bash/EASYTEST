@@ -1,5 +1,11 @@
 #!/bin/bash
+# sudo apt install qemu-utils bridge-utils qemu-kvm qemu-system-gui
+
 ping -c 1 google.com || exit 1
+
+get-fai-config-space.bash
+
+copy-fai-config-space.bash 
 
 # INET="enp8s0" # better probe for interface to the internet (default gw?) 
 # INET="enx00e04c68353b" # 
@@ -23,10 +29,35 @@ GROUPNAME="$USER" # not correct but ....
 COMPHOSTNAME="faiserver"
 COMPFILENAME="fai-$COMPHOSTNAME-buster64.raw"
 
+[ -f $COMPFILENAME ] && exit 1
+
+sudo apt install mtools
+sudo apt install dosfstools
+
+sudo fai-mirror -v /srv/files/scratch/mirror # >log.txt 2>error.txt
+sudo fai-cd -m /srv/files/scratch/mirror/ fai-cd.iso
+
+# sudo mkdir -p /srv/fai
+# sudo rm -r /srv/fai/config
+# sudo cp -ar /home/demo/fai.config/config/ /srv/fai/
+
+#if [ -f /srv/fai/config/basefile/BUSTER* ];
+#then
+#  echo vorhanden
+#else 
+#  [ -f BUSTER* ] || sudo /srv/fai/config/basefiles/mk-basefile -d . BUSTER64
+#  sudo cp BUSTER* /srv/fai/config/basefiles/ 
+#fi
+
+# cl='AMD64,FAIBASE,DEBIAN,BUSTER64,DEMO,FAISERVER,EASYTEST,GRUB_PC'
+# sudo fai-diskimage -v -S10G --hostname $COMPHOSTNAME -c$cl $COMPFILENAME
+# sudo chown $USERNAME.$GROUPNAME $COMPFILENAME
+
 ping -c 1 google.com || exit 1
 ip addr|grep $INET || exit 1
 sudo brctl show |grep tap1 >/dev/null || sudo fai-mk-network -i $INET $USERNAME
-fai-kvm disk $COMPFILENAME &
+# fai-kvm disk $COMPFILENAME &
+fai-kvm -NVn -u 1 cd fai-cd.iso -D $COMPFILENAME &
 
 fai-add-bridge
 
@@ -46,3 +77,5 @@ echo "Next Client?"
 read 
 fai-kvm -NVn -u 6 pxe & # Test Installation
 read 
+
+
