@@ -9,3 +9,6 @@ wget 'https://gitlab/EKF_Tools/test-tools/hreset/-/jobs/artifacts/master/downloa
 wget 'https://gitlab/EKF_Tools/extern/progspi/-/jobs/artifacts/master/download?job=Linux' --no-check-certificate -O progspi.zip
 
 wget https://www.ekf.de/s/sc6/firmware/sc6uefi130.zip
+wget https://www.ekf.de/p/pc6/firmware/pc6uefi130.zip
+
+wget https://www.ekf.de/s/sc5/firmware/sc5uefi182.zip
