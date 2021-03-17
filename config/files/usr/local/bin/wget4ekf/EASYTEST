@@ -4,4 +4,6 @@
 # sudo apt install libc6-i386
 # wget  --no-check-certificate https://gitlab/EKF_Tools/extern/progspi/raw/master/progspi
 
+wget 'https://gitlab/test-tools/hreset/-/jobs/artifacts/master/download?job=Linux' --no-check-certificate -O - 
+
 wget https://www.ekf.de/s/sc6/firmware/sc6uefi130.zip
