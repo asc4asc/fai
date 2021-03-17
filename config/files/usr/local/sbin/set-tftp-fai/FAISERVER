@@ -8,8 +8,10 @@ fai-chboot -Iv -f verbose,sshd,createvt,menu -u nfs://faiserver/srv/fai/config b
 
 # Since we do not know the MAC address, our DHCP cannot provide the hostname.
 # Therefore we do explicitly set the hostname
-fai-chboot -Iv -f verbose,sshd,createvt -u nfs://faiserver/srv/fai/config -k hostname=gnomehost gnomehost
-fai-chboot -Iv -f verbose,sshd,createvt -u nfs://faiserver/srv/fai/config -k hostname=demohost demohost
+# fai-chboot -Iv -f verbose,sshd,createvt -u nfs://faiserver/srv/fai/config -k hostname=gnomehost gnomehost
+# fai-chboot -Iv -f verbose,sshd,createvt -u nfs://faiserver/srv/fai/config -k hostname=demohost demohost
+rm /srv/tftp/fai/pxelinux.cfg/C0A* 
+
 for c in {01..10}; do
     fai-chboot -Iv -f verbose,sshd,createvt,menu -u nfs://faiserver/srv/fai/config -k hostname=client$c client$c
 done
