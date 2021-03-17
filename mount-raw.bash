@@ -7,5 +7,5 @@ kpartx -av /dev/loop0
 # umount /mnt
 mkdir -P /target/home
 mount -o ro /dev/mapper/loop0p7 /target
-mount -o ro /dev/mapper/loop0p7 /target/home
+mount -o ro /dev/mapper/loop0p3 /target/home
 # umount /mnt
