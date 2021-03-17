@@ -11,4 +11,4 @@ wget 'https://gitlab/EKF_Tools/extern/progspi/-/jobs/artifacts/master/download?j
 wget https://www.ekf.de/s/sc6/firmware/sc6uefi130.zip
 wget https://www.ekf.de/p/pc6/firmware/pc6uefi130.zip
 
-wget https://www.ekf.de/s/sc5/firmware/sc5uefi182.zip
+wget https://www.ekf.de/s/sc5/firmware/SC5UEFI182.zip
