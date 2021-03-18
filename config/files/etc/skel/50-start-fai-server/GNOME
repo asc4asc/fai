@@ -1,1 +1,2 @@
-start-faiserver.bash
+#!/bin/bash
+[ 50-make-faiserver.no ] && start-faiserver.bash
