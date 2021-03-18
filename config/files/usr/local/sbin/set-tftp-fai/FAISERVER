@@ -1,6 +1,6 @@
 #! /bin/bash
 
-rm /srv/tftp/fai/pxelinux.cfg/C0A* # delete original entrys
+# rm /srv/tftp/fai/pxelinux.cfg/C0A* # delete original entrys
 
 # create default pxelinux boot configuration
 fai-chboot -o default
