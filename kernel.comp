@@ -19,4 +19,8 @@ sudo apt update
 
 apt-get source linux
 
+cd linux-*
+
+fakeroot debian/rules binary
+
 # cd linux-version
