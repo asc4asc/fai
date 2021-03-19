@@ -22,6 +22,18 @@ apt-get source linux
 cd linux-*
 
 fakeroot debian/rules binary
-# fakeroot -j8 debian/rules binary # SC5 speed up?
+# make-kpkg -j8 --append-to-version +12+ --initrd buildpackage # ????
 
 # cd linux-version
+
+# vanilla kernel
+# wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.9.tar.xz
+# xz -d -v linux-5.6.9.tar.xz
+# cd linux-5.6.9 
+# cp -v /boot/config-$(uname -r) .config
+# make menuconfig
+# make -j 4
+# sudo make modules_install 
+# sudo make install 
+# sudo update-initramfs -c -k 5.6.9
+# sudo update-grub
