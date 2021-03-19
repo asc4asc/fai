@@ -1,11 +1,11 @@
 #!/bin/bash
 
-apt-get install build-essential fakeroot
-apt-get build-dep linux
+sudo apt-get install build-essential fakeroot
+sudo apt-get build-dep linux
 
-ainsl -v /etc/apt/sources.list "deb-src http://deb.debian.org/debian buster main" 
-ainsl -v /etc/apt/sources.list "deb-src http://deb.debian.org/debian buster-updates main" 
-ainsl -v /etc/apt/sources.list "deb-src http://deb.debian.org/debian-security/ buster/updates main" 
+sudo ainsl -v /etc/apt/sources.list "deb-src http://deb.debian.org/debian buster main" 
+sudo ainsl -v /etc/apt/sources.list "deb-src http://deb.debian.org/debian buster-updates main" 
+sudo ainsl -v /etc/apt/sources.list "deb-src http://deb.debian.org/debian-security/ buster/updates main" 
 
 # from the net!
 # deb http://deb.debian.org/debian buster main
@@ -15,7 +15,7 @@ ainsl -v /etc/apt/sources.list "deb-src http://deb.debian.org/debian-security/ b
 # deb http://deb.debian.org/debian buster-updates main
 # deb-src http://deb.debian.org/debian buster-updates main
 
-apt update
+sudo apt update
 
 apt-get source linux
 
