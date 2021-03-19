@@ -22,5 +22,6 @@ apt-get source linux
 cd linux-*
 
 fakeroot debian/rules binary
+# fakeroot -j8 debian/rules binary # SC5 speed up?
 
 # cd linux-version
