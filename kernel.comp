@@ -3,9 +3,9 @@
 apt-get install build-essential fakeroot
 apt-get build-dep linux
 
-echo "deb-src http://deb.debian.org/debian buster main" >> /etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian buster-updates main" >> /etc/apt/sources.list
-echo "deb http://deb.debian.org/debian-security/ buster/updates main" >> /etc/apt/sources.list
+ainsl -v /etc/apt/sources.list "deb-src http://deb.debian.org/debian buster main" 
+ainsl -v /etc/apt/sources.list "deb-src http://deb.debian.org/debian buster-updates main" 
+ainsl -v /etc/apt/sources.list "deb-src http://deb.debian.org/debian-security/ buster/updates main" 
 
 # from the net!
 # deb http://deb.debian.org/debian buster main
