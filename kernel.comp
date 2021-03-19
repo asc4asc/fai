@@ -25,7 +25,8 @@ cd linux-*
 
 export MAKEOPTS="-j 6" 
 # CXXFLAGS =
-fakeroot debian/rules binary
+# fakeroot debian/rules binary
+fakeroot debian/binary-arch_amd64_none_amd64_real binary
 # make-kpkg -j8 --append-to-version +12+ --initrd buildpackage # ????
 
 # cd linux-version
