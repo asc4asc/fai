@@ -1,6 +1,6 @@
 echo " Not ready yet!"
 
-echo "delete or change ssh keys!" # in nfsroot and fai account /vat/fai/logs/remote-logs
+echo "delete or change ssh keys!" # nfsroot and fai account /vat/fai/logs/remote-logs
 echo "delete or change passwords!" # root and demo.... ?
 echo "delete extra sudo files!" /etc/sudoe...d/* ?
 echo "delete auto login without passwords!" # gnome and shell rc.local? 
