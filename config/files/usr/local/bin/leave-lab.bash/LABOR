@@ -1,0 +1,7 @@
+echo " Not ready yet!"
+
+echo "delete or change ssh keys!"
+echo "delete or change passwords!"
+echo "delete extra sudo files!"
+echo "delete auto login without passwords!"
+
