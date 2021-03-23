@@ -1,0 +1,7 @@
+sudo poweroff
+start-faiserver.bash
+
+ps ax
+ls -l 
+df 
+free
