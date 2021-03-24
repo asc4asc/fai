@@ -1,3 +1,4 @@
 history -c
 history -r m1.hist
+history -r m2.hist
 history
