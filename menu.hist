@@ -2,3 +2,4 @@ history -c
 history -c ; history -r m1.hist ; $PROMPT_COMMAND ; history | head -20
 history -c ; history -r m2.hist ; $PROMPT_COMMAND ; history | head -20
 history
+cp 30-dd-test 99-powercycle dothis/ ; sudo reboot
