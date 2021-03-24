@@ -3,3 +3,6 @@ history -c ; history -r m1.hist ; $PROMPT_COMMAND ; history | head -20
 history -c ; history -r m2.hist ; $PROMPT_COMMAND ; history | head -20
 history
 cp 30-dd-test 99-powercycle dothis/ ; sudo reboot
+disk=`mount  | grep "on / " | awk '{ print $1 }'` ; sudo dd if=$disk of=/dev/null bs=1M iflag=direct status=progress count=10000 # quick read performance test disk with dd.
+dd if=/dev/zero bs=1M count=1k 2>/tmp/info |md5sum >/dev/null && cat /tmp/info |grep "MB/s" # CPU Quick test
+while true; do echo "Hallo Paul"; sleep 2;  done; # Endlos Schleife
