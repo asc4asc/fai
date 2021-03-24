@@ -1,5 +1,7 @@
 #!/bin/bash
 
+history -c ; history -r ../menu.hist ; $PROMPT_COMMAND ; history | head -20
+
 echo "show it!"
 
 exit 0
