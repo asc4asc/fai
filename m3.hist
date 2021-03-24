@@ -1,0 +1,3 @@
+bootctl  install
+kernel-install add $(uname -r) /boot/vmlinuz-$(unambootctl  install
+efibootmgr
