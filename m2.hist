@@ -15,4 +15,4 @@ sudo ss --listening --processes
 sudo ss --listening --processes --tcp
 sudo ss --listening --processes --tcp --numeric
 ip route show match default
-history -c ; history -r m1.hist ; $PROMPT_COMMAND ; history | head -20
+history -c ; history -r menu.hist ; $PROMPT_COMMAND ; history | head -20
