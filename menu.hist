@@ -1,4 +1,4 @@
 history -c
-history -r m1.hist
-history -r m2.hist
+history -c ; history -r m1.hist ; $PROMPT_COMMAND ; history | head -20
+history -c ; history -r m2.hist ; $PROMPT_COMMAND ; history | head -20
 history
