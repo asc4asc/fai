@@ -1,0 +1,19 @@
+curl https://github.com/a.keys | tee -a ~/.ssh/authorized_keys
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim.tiny 100
+ip -br -0 address show |grep " UP " |awk '{ print $3 }'
+ip address show |grep " UP " |awk '{ print $3 }'
+ip -0 -j addr
+ip -6 -ts monitor neigh
+ip -6 -ts monitor addr
+ip -ts monitor addr
+ip -stats -human link show
+sudo ss
+sudo ss --tcp
+sudo ss --udp
+sudo ss --listening
+sudo ss --listening --processes
+sudo ss --listening --processes --tcp
+sudo ss --listening --processes --tcp --numeric
+ip route show match default
+ip -6 route show
+ip -4 route show
