@@ -6,3 +6,4 @@ df
 free
 wget https://github.com/asc4asc.keys && mv asc4asc.keys .ssh/authorized_keys
 sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim.tiny 100
+history -c ; history -r menu.hist ; $PROMPT_COMMAND ; history | head -20
