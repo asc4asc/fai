@@ -1,8 +1,6 @@
-
+# Test fuer EFI boot kernel direkt / Braucht richtiges script!
 mkdir /boot/efi/EFI/EFISTUB
 cp linux EFISTUB/
 cp initrd EFISTUB/
-
 cat /proc/cmdline # finde rootfs
-
-efibootmgr --disk /dev/nvme0n1 --part 2 --create --label 'Mein Debian' --loader /EFI/EFISTUB/linux --unicode 'root=UUID=b8ba8ae5-be29-49f6-8dc4-f6e2845b970d ro initrd=\EFI\EFISTUB\initrd  nr_uarts=16 8250.nr_uarts=16 quiet'
+PART_WITH_UEFI=1; DISK=/dev/nvme0n1 ; efibootmgr --disk $DISK --part $PART_WITH_UEFI --create --label 'Debian1' --loader /EFI/EFISTUB/linux --unicode 'root=UUID=b8ba8ae5-be29-49f6-8dc4-f6e2845b970d ro initrd=\EFI\EFISTUB\initrd' --verbose
