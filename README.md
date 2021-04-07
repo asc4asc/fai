@@ -1,3 +1,5 @@
 Docu see branch gh_pages
 
- history -c ; history -r menu.hist ; $PROMPT_COMMAND ; history | head -20 
+Live CD!
+
+https://wiki.fai-project.org/index.php/Use_nfsroot_for_diskless_clients
